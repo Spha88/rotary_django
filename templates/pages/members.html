@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Members{% endblock title %}
+
+{% block content %}
+
+<div id="members" class="bg-texture">
+    {% include "partials/_page_header.html" with heading="Members" background_image="images/members.jpg" %}
+    <div class="container">
+        <div class="members">
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_1.jpg' %})">
+                </div>
+                <h2><a href="#">Alfred Nzoe</a></h2>
+                <h5>Secretary</h5>
+            </div>
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_2.jpg' %})">
+                </div>
+                <h2><a href="#">Samuel Wick</a></h2>
+                <h5>Data Scientist</h5>
+            </div>
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_3.jpg' %})">
+                </div>
+                <h2><a href="#">Zongezile May</a></h2>
+                <h5>Principal</h5>
+            </div>
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_4.jpg' %})">
+                </div>
+                <h2><a href="#">Florecent Joy</a></h2>
+                <h5>Florist</h5>
+            </div>
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_5.jpg' %})">
+                </div>
+                <h2><a href="#">Qhama Mazwayi</a></h2>
+                <h5>Events Manager</h5>
+            </div>
+            <!-- Member card -->
+            <div class="member-card">
+                <div class="pro-pic" style="background-image: url({% static 'images/member_6.jpg' %})">
+                </div>
+                <h2><a href="#">Natalie Van de Merwe</a></h2>
+                <h5>Logistics</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

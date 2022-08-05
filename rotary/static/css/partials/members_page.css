@@ -69,85 +69,55 @@ button {
   color: #651d61;
 }
 
-.my-cards {
+.members {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2rem 0;
   transition: all 500ms ease-in-out;
 }
 @media (max-width: 425px) {
-  .my-cards {
-    flex-direction: column;
+  .members {
+    padding-top: 1rem;
   }
 }
-.my-cards .my-card {
+.members .member-card {
   width: 32%;
-  background-color: white;
-  margin-bottom: 2rem;
-  transition: box-shadow 200ms linear;
+  margin-bottom: 3rem;
+  text-align: center;
   transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-.my-cards .my-card:hover {
-  box-shadow: 1px 3px 16px 1px rgba(0, 0, 0, 0.61);
-  -webkit-box-shadow: 1px 3px 16px 1px rgba(0, 0, 0, 0.61);
-  -moz-box-shadow: 1px 3px 16px 1px rgba(0, 0, 0, 0.61);
-}
-@media (max-width: 768px) {
-  .my-cards .my-card {
-    width: 49%;
-  }
-  .my-cards .my-card:last-child {
-    display: none;
-  }
 }
 @media (max-width: 425px) {
-  .my-cards .my-card {
+  .members .member-card {
     width: 100%;
     margin-bottom: 1rem;
+    background-color: #f8f9fa;
+    padding-bottom: 1.5rem;
   }
-  .my-cards .my-card:last-child {
-    display: block;
+  .members .member-card .ProPic {
+    height: 400px !important;
   }
 }
-.my-cards .my-card .card-image {
+.members .member-card .pro-pic {
   width: 100%;
-  height: 300px !important;
-  position: relative;
-  background-image: url("../images/story_1.jpg");
+  height: 400px;
   background-size: cover;
   background-position: center center;
+  transition: background-size 200ms ease-in;
+  transition: all 500ms ease-in-out;
 }
-.my-cards .my-card .card-image::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border: #ffc000 1px solid;
-  left: 0;
-  top: 0;
-  transform: translate(5%, 5%);
-  width: 90%;
-  height: 90%;
+@media (max-width: 768px) {
+  .members .member-card .pro-pic {
+    height: 300px;
+  }
 }
-.my-cards .my-card .card-body {
-  padding: 1rem 1.5rem 2rem;
-  text-align: center;
+.members .member-card h2 {
+  margin: 1rem 0 0 0;
 }
-.my-cards .my-card .card-body h1 {
-  font-size: 1.1rem;
-  line-height: normal;
-}
-.my-cards .my-card .card-body p {
-  font-size: 1.1em;
-}
-.my-cards .my-card .card-body a {
-  display: inline-block;
-  color: #019fcb;
-  font-weight: 500;
-  transition: color 200ms linear;
-}
-.my-cards .my-card .card-body a:hover {
-  color: #013983;
+.members .member-card h5 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
 }
 
-/*# sourceMappingURL=cards.css.map */
+/*# sourceMappingURL=members_page.css.map */

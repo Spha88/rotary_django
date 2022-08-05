@@ -118,3 +118,15 @@ $mobile: 425px;
         color: $white;
     }
 }
+
+#navbarsExample08 {
+    a {
+        font-size: 1.1rem;
+        margin-right: 2rem;
+        color: $rotary-dark-blue;
+        &.active, &:hover {
+            font-weight: bold;
+            color: $purple;
+        }
+    }
+}

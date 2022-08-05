@@ -59,6 +59,16 @@ button {
   color: white;
 }
 
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
 #hero {
   background: #013983;
   background-image: url("../images/hero.jpg");

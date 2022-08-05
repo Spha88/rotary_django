@@ -59,6 +59,16 @@ button {
   color: white;
 }
 
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
 /* IMPORT */
 /* Page header */
 #page-header {
@@ -158,6 +168,16 @@ button {
 .my-btn:hover {
   background-color: #019fcb;
   color: white;
+}
+
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
 }
 
 .my-cards {
@@ -302,6 +322,16 @@ button {
 .my-btn:hover {
   background-color: #019fcb;
   color: white;
+}
+
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
 }
 
 #footer {
@@ -459,6 +489,16 @@ button {
 .my-btn:hover {
   background-color: #019fcb;
   color: white;
+}
+
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
 }
 
 #hero {
@@ -923,6 +963,16 @@ button {
   color: white;
 }
 
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
 #events .events-container {
   display: flex;
   justify-content: space-between;
@@ -1063,6 +1113,16 @@ button {
   color: white;
 }
 
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
 #news {
   padding-bottom: 3rem;
 }
@@ -1169,6 +1229,129 @@ button {
 .important-links .links a:hover {
   background-color: white;
   color: #013983;
+}
+
+/* Members page */
+/* VARIABLES */
+/* Colors */
+/*Fonts*/
+/*Mixin */
+/* @import '../../../assets/styles/variables.scss'; */
+/* Media Query */
+/* Display element flex and center horizontal and vertical */
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #013983;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
+.my-btn {
+  background: #013983;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 15px 60px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 400ms linear;
+}
+.my-btn:hover {
+  background-color: #019fcb;
+  color: white;
+}
+
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  .members {
+    padding-top: 1rem;
+  }
+}
+.members .member-card {
+  width: 32%;
+  margin-bottom: 3rem;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  .members .member-card {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+    padding-bottom: 1.5rem;
+  }
+  .members .member-card .ProPic {
+    height: 400px !important;
+  }
+}
+.members .member-card .pro-pic {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  transition: background-size 200ms ease-in;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  .members .member-card .pro-pic {
+    height: 300px;
+  }
+}
+.members .member-card h2 {
+  margin: 1rem 0 0 0;
+}
+.members .member-card h5 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
 }
 
 #top-header {

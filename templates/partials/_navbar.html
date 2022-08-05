@@ -7,19 +7,19 @@
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">About Rotary</a>
+            <a class="nav-link {% if '/' == request.path %}active{% endif %}" aria-current="page" href="{% url 'home' %}">About Rotary</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'causes' %}">Our Causes</a>
+            <a class="nav-link {% if 'causes' in request.path %}active{% endif %} " href="{% url 'causes' %}">Our Causes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'events' %}">Events</a>
+            <a class="nav-link {% if 'events' in request.path %}active{% endif %} " href="{% url 'events' %}">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'news' %}">News</a>
+            <a class="nav-link {% if 'news' in request.path %}active{% endif %} " href="{% url 'news' %}">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" >Events</a>
+            <a class="nav-link {% if 'members' in request.path %}active{% endif %} " href="{% url 'members' %}" >Members</a>
           </li>
         </ul>
       </div>

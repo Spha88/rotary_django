@@ -14,3 +14,7 @@ def events(request):
 
 def news(request):
     return render(request, 'pages/news.html')
+
+
+def members(request):
+    return render(request, 'pages/members.html')
