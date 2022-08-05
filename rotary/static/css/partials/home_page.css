@@ -37,6 +37,10 @@ button {
   cursor: pointer;
 }
 
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
 #hero {
   background: #013983;
   background-image: url("../images/hero.jpg");

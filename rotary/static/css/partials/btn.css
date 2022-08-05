@@ -37,6 +37,10 @@ button {
   cursor: pointer;
 }
 
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
 .my-btn {
   background: #013983;
   color: white;

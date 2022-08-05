@@ -38,6 +38,10 @@ button {
   cursor: pointer;
 }
 
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
 #footer {
   background: #013983;
   color: #ffc000;

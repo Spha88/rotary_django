@@ -91,3 +91,11 @@ $mobile: 425px;
   button {
     cursor: pointer;
   }
+
+
+// class for textured background
+.bg-texture {
+    background: {
+        image: url('../images/textured_bg.jpg')
+    }
+}

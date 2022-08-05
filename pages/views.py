@@ -6,3 +6,7 @@ def home(request):
 
 def causes(request):
     return render(request, 'pages/causes.html')
+
+
+def events(request):
+    return render(request, 'pages/events.html')

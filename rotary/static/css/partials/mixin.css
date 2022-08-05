@@ -37,4 +37,8 @@ button {
   cursor: pointer;
 }
 
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
 /*# sourceMappingURL=mixin.css.map */
