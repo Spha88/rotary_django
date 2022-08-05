@@ -1,0 +1,93 @@
+/* VARIABLES */
+/* Colors */
+$text-color: rgb(57, 66, 74);
+$purple: #651d61;
+$rotary-yellow: #ffc000;
+$rotary-sky-blue: #019fcb;
+$rotary-dark-blue: #013983;
+$black: #0d0d0d;
+$white: rgb(255, 255, 255);
+$grey: #f8f9fa;
+$border-grey: rgba(187, 195, 209, 0.719);
+
+/*Fonts*/
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Work Sans', sans-serif;
+
+/*Mixin */
+@mixin box-shadow-hover {
+    transition: box-shadow 200ms linear;
+    &:hover {
+        box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+        -webkit-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+        -moz-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+    }
+}
+/* @import '../../../assets/styles/variables.scss'; */
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+
+/* Media Query */
+@mixin media($bp) {
+    transition: all 500ms ease-in-out;
+    @if $bp == 1024px {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $bp == 768px {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $bp == 425px {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+}
+
+@mixin centerBackground {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Display element flex and center horizontal and vertical */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: $body-font;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+   
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    font-weight: 900;
+    color: $rotary-dark-blue;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }

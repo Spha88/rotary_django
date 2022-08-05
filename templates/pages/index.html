@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Home Page
+{% endblock title %}
+{% block content %}
+    <div id="hero">
+        <div>
+            <img src="{% static 'images/rotary_logo_white.svg' %}"
+                 alt="Rotary logo white"/>
+            <h1>
+                People <span>of</span> Action
+            </h1>
+            <p>
+                Rotary is where neighbors, friends, and problem solvers share ideas, join leaders, and take action to create lasting change
+            </p>
+        </div>
+    </div>
+
+    <!--about section -->
+    <section class="container py-5">
+        <div class="col-lg-6">
+            <h1 class="pb-4">What we do.</h1>
+            <div class="content">
+                <p>
+                    This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this: As a new WordPress user, you should go to your dashboard to delete this page and create new pages for your content. Have fun! Vivamus enim nibh, maximus mollis hendrerit eu, dictum id quam. Ut sit amet justo dolor. Nam ullamcorper eleifend tortor eget dapibus. Nam interdum suscipit eleifend. Vestibulum iaculis dolor sit...
+                </p>
+            </div>
+            <a href="#" class="my-btn mt-2">Read more</a>
+        </div>
+    </section>
+
+    <!-- Causes Section-->
+    <div id="causes-section">
+        <div class="container">
+            <div class="row">
+                <h1 class="my-heading">Our causes</h1>
+                <p class="my-lead">
+                    Rotary is dedicated to causes that build international relationships, improve lives, and create a better world to support our peace efforts and end polio forever.
+                </p>
+                <div class="my-cards">
+                    <div class="my-card">
+                        <div class="card-image"></div>
+                        <div class="card-body">
+                            <h1>Card title</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
+                            </p>
+                            <a href="#">Link to the cause</a>
+                        </div>
+                    </div>
+                    <div class="my-card">
+                        <div class="card-image"></div>
+                        <div class="card-body">
+                            <h1>Card title</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
+                            </p>
+                            <a href="#">Link to the cause</a>
+                        </div>
+                    </div>
+                    <div class="my-card">
+                        <div class="card-image"></div>
+                        <div class="card-body">
+                            <h1>Card title</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
+                            </p>
+                            <a href="#">Link to the cause</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <a class="view-all-btn" href="#">View All Btn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stories -->
+    <div id="stories-section">
+        <div class="container">
+            <div class="row">
+                <h1>Latest stories</h1>
+                <div class="content">
+                    <!--First post -->
+                    <div class="last-story"
+                         style="background-image: url({% static 'images/event_1.jpg' %})">
+                        <div class="last-story-content">
+                            <h1>Latest Story title</h1>
+                            <p class="last-story-date">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     className="h-6 w-6"
+                                     fill="none"
+                                     viewBox="0 0 24 24"
+                                     stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                23 July 2021
+                            </p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Last two stories -->
+                    <div class="last-two-stories">
+                        <div class="story">
+                            <img src="{% static 'images/event_3.jpg' %}" alt="event_3" />
+                            <div class="details">
+                                <p class="time">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         className="h-6 w-6"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    25 March 2021
+                                </p>
+                                <h3>Post title</h3>
+                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quas!</div>
+                                <a href="#">Read more</a>
+                            </div>
+                        </div>
+                        <div class="story">
+                            <img src="{% static 'images/event_2.jpg' %}" alt="envent_2" />
+                            <div class="details">
+                                <p class="time">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         className="h-6 w-6"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    25 March 2021
+                                </p>
+                                <h3>
+                                    Post title
+                                </h3>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quas!
+                                </div>
+                                <a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of the two stories -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- President of the rotary -->
+    <div id="president">
+        <div class="container">
+            <h1>Word from the President</h1>
+            <div class="content">
+                <img src="{% static 'images/president.jpg' %}" alt="president of rotary port alfred image" />
+                <div class="content-details">
+                    <h3>Colin Murphy</h3>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit aliquid aperiam? Deserunt quo dolores dolorem aspernatur tenetur laboriosam corrupti voluptatem cum reprehenderit culpa doloremque at blanditiis iste optio inventore sit quis, esse, qui, pariatur porro? Alias iste praesentium pariatur quasi velit dolores quisquam, nam doloribus, quia animi rerum omnis.
+                    </div>
+                    <a class="my-btn" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join rotary Port Alfred -->
+    <div id="join-section">
+        <div class="container">
+            <div class="content">
+                <h1>Join Port Alfred Rotary</h1>
+                <p>Club activities, social events, and volunteer projects offer networking opportunities that build personal and professional connections. And Rotarians can extend those networks by visiting other clubs around the globe.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
