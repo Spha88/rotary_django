@@ -10,3 +10,7 @@ def causes(request):
 
 def events(request):
     return render(request, 'pages/events.html')
+
+
+def news(request):
+    return render(request, 'pages/news.html')

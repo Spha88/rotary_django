@@ -41,6 +41,24 @@ button {
   background-image: url("../images/textured_bg.jpg");
 }
 
+.my-btn {
+  background: #013983;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 15px 60px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 400ms linear;
+}
+.my-btn:hover {
+  background-color: #019fcb;
+  color: white;
+}
+
 .my-cards {
   display: flex;
   flex-wrap: wrap;

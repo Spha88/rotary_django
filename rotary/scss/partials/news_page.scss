@@ -1,0 +1,95 @@
+@import './mixin.scss';
+
+#news {
+    padding-bottom: 3rem;
+    .news-layout {
+        display: flex;
+        .articles {
+            width: 70%;
+            @include media($laptop) {
+                width: 100%;
+            }
+            article {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                background-color: $white;
+                @include media($mobile) {
+                    flex-direction: column;
+                }
+                .article-featured-image {
+                    width: 40%;
+                    height: 300px;
+                    background: {
+                        size: cover;
+                        position: center center;
+                        repeat: no-repeat;
+                    }
+                    @include media($tablet) {
+                        height: 350px;
+                    }
+                    @include media($mobile) {
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+                .article-content {
+                    width: 60%;
+                    padding: 1rem 2rem;
+                    @include media($mobile) {
+                        width: 100%;
+                    }
+                    p {
+                        margin: 1rem 0 0 0;
+                        font-size: 0.9em;
+                    }
+                    h3 {
+                        margin: 0 0 .2rem 0;
+                    }
+                    div {
+                        margin-bottom: .5rem;
+                    }
+                    a {
+                        color: $rotary-sky-blue;
+                    }
+                }
+            }
+        }
+        aside {
+            padding: 0 1rem 1rem 1rem;
+            width: 30%;
+            @include media($laptop) {
+                display: none;
+            }
+        }
+    }
+}
+
+/* aside */
+.important-links {
+    padding: 1rem;
+    border-bottom: 1px solid $border-grey;
+    margin-bottom: 2rem;
+    h2 {
+        color: $rotary-sky-blue;
+        margin-top: 0;
+    }
+    .links {
+        a {
+            display: block;
+            padding: 20px 60px;
+            text-align: center;
+            border: 1px solid $rotary-sky-blue;
+            margin-bottom: 1rem;
+            color: $white;
+            background-color: $rotary-dark-blue;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 300ms linear;
+            &:hover {
+                background-color: $white;
+                color: $rotary-dark-blue;
+            }
+        }
+    }
+}

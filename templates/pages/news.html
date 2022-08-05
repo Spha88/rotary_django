@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}News{% endblock title %}
+
+{% block content %}
+<div id="news" class="bg-texture">
+    {% include 'partials/_page_header.html' with heading="Rotary news" background_image="images/pg_header_bg.jpg" %}
+    {% include 'partials/_lead_paragraph.html' with lead_paragraph="Rotary has been up and about making a real difference within our community." %}
+
+    <!-- News-->
+    <div class="container">
+        <div class="news-layout">
+            <div class="articles">
+
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/event_2.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>Rotary Port Alfred Wins again</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/event_1.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>Aliwal north visits port alfred</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/event_3.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>Kenton was buzzing</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/event_2.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>visit the new world</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/story_1.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>Rotary Port Alfred Wins again</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/story_2.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>23 May 2021</p>
+                        <h3>Rotary Port Alfred Wins again</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/story_3.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>24 November 2022</p>
+                        <h3>This is the truth</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                {% comment %} Articles {% endcomment %}
+                <article>
+                    <div class="article-featured-image" style="background-image: url({% static 'images/event_2.jpg' %})"></div>
+                    <div class="article-content">
+                        <p>10 October 2022</p>
+                        <h3>Rotary Port Alfred Wins again</h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum aliquid assumenda provident debitis cumque ipsa eaque repudiandae, fugiat nemo totam in natus sed vero vitae exercitationem dolores laudantium libero.</div>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+            </div>
+            <aside>
+                <div class="important-links">
+                    <h2>Important Links</h2>
+                    <div class="links">
+                        <a href="https://www.rotary.org/en/get-involved/join" target="_blank" rel="noopener noreferrer">Join</a>
+                        <a href="https://my.rotary.org/en/search/club-finder" target="_blank" rel="noopener noreferrer">Find a Club</a>
+                        <a href="https://my.rotary.org/en/donate" target="_blank" rel="noopener noreferrer">Donate</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+{% endblock content %}
