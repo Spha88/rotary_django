@@ -2,11 +2,19 @@
 @import './partials/btn.scss';
 
 /* IMPORT */
-/* Home page */
-@import './partials/home_page.scss';
-
+/* Page header */
+@import './partials/page_header.scss';
+/* Cards */
+@import './partials/cards.scss';
 /* Footer */
 @import './partials/footer.scss';
+
+
+/* Home page */
+@import './partials/home_page.scss';
+/* Causes page */ 
+@import './partials/causes_page.scss';
+
 
 #top-header {
     padding: 1rem;

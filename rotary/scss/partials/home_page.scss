@@ -80,70 +80,7 @@
             line-height: 1.5;
         }
     }
-    .my-cards {
-        display: flex;
-        justify-content: space-between;
-        @include media($mobile) {
-            flex-direction: column;
-        }
-        .my-card {
-            width: 32%;
-            background-color: $white;
-            @include box-shadow-hover;
-            @include media($tablet) {
-                width: 49%;
-                &:last-child {
-                    display: none;
-                }
-            }
-            @include media($mobile) {
-                width: 100%;
-                margin-bottom: 1rem;
-                &:last-child {
-                    display: block;
-                }
-            }
-            .card-image {
-                width: 100%;
-                height: 300px !important;
-                position: relative;
-                background-image: url('../images/story_1.jpg');
-                background: {
-                    size: cover;
-                    position: center center;
-                }
-                
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    border: $rotary-yellow 1px solid;
-                    left: 0;
-                    top: 0;
-                    transform: translate(5%, 5%);
-                    width: 90%;
-                    height: 90%;
-                }
-            }
-            .card-body {
-                padding: 1rem 1.5rem 2rem;
-                text-align: center;
-                h1 { font-size: 1.1rem; line-height: normal;}
-                p {
-                    font-size: 1.1em;
-                }
-                a {
-                    display: inline-block;
-                    color: $rotary-sky-blue;
-                    font-weight:  500;
-                    transition: color 200ms linear;
-                    &:hover {
-                        color: $rotary-dark-blue;
-                    }
-                }
-            }
-        }
-    }
+    
     .btn-container {
         text-align: center;
         .view-all-btn {
