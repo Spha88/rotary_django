@@ -52,8 +52,15 @@
             padding: 1rem 1.5rem 2rem;
             text-align: center;
             h1 { font-size: 1.1rem; line-height: normal;}
-            p {
+            div {
                 font-size: 1.1em;
+                font-family: $body-font !important;
+                color: inherit !important;
+                p {
+                    font-size: 1.1em;
+                    font-family: $body-font !important;
+                    color: inherit !important
+                    }
             }
             a {
                 display: inline-block;

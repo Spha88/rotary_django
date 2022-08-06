@@ -248,8 +248,15 @@ button {
   font-size: 1.1rem;
   line-height: normal;
 }
-.my-cards .my-card .card-body p {
+.my-cards .my-card .card-body div {
   font-size: 1.1em;
+  font-family: "Work Sans", sans-serif !important;
+  color: inherit !important;
+}
+.my-cards .my-card .card-body div p {
+  font-size: 1.1em;
+  font-family: "Work Sans", sans-serif !important;
+  color: inherit !important;
 }
 .my-cards .my-card .card-body a {
   display: inline-block;

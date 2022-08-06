@@ -38,41 +38,27 @@
                 <p class="my-lead">
                     Rotary is dedicated to causes that build international relationships, improve lives, and create a better world to support our peace efforts and end polio forever.
                 </p>
-                <div class="my-cards">
-                    <div class="my-card">
-                        <div class="card-image"></div>
-                        <div class="card-body">
-                            <h1>Card title</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
-                            </p>
-                            <a href="#">Link to the cause</a>
-                        </div>
+                {% if causes %}
+                    <div class="my-cards">
+                        {% for cause in causes %}
+                            <div class="my-card">
+                                <div class="card-image" style="background-image: url({{ cause.thumb_nail.url }})"></div>
+                                <div class="card-body">
+                                    <h1>{{ cause.title }}</h1>
+                                    <div>
+                                        {{ cause.excerpt | safe }}
+                                    </div>
+                                    <a href="{% url 'causes' %}">Link to the cause</a>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    <div class="my-card">
-                        <div class="card-image"></div>
-                        <div class="card-body">
-                            <h1>Card title</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
-                            </p>
-                            <a href="#">Link to the cause</a>
-                        </div>
+                    <div class="btn-container">
+                        <a class="view-all-btn" href="{% url 'causes' %}">View All Btn</a>
                     </div>
-                    <div class="my-card">
-                        <div class="card-image"></div>
-                        <div class="card-body">
-                            <h1>Card title</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error exercitationem tenetur nostrum est maiores ea deserunt suscipit molestiae quia!
-                            </p>
-                            <a href="#">Link to the cause</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-container">
-                    <a class="view-all-btn" href="#">View All Btn</a>
-                </div>
+                {% else %}
+                    <p class="lead text-danger">No causes added yet</p>
+                {% endif %}
             </div>
         </div>
     </div>

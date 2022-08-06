@@ -1,0 +1,38 @@
+#page-header {
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: all 500ms linear;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#page-header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.137);
+  transition: all 300ms linear;
+}
+#page-header:hover::after {
+  background-color: rgba(0, 0, 0, 0.507);
+}
+#page-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 3px 8px #000;
+  max-width: 600px;
+  text-align: center;
+  font-weight: normal;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=page_header.css.map */
