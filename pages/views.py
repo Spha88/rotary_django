@@ -6,9 +6,13 @@ from excerpt_html import excerpt_html
 
 def home(request):
     causes = Cause.objects.all()[:3]
+    stories = Story.objects.all()[:3]
 
     content = {
-        'causes': causes
+        'causes': causes,
+        'latest_story': stories[0],
+        'stories': stories[1:] # last two stories of the three
+
     }
     return render(request, 'pages/index.html', content)
 
