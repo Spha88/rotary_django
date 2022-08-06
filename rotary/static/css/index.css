@@ -1179,7 +1179,7 @@ button {
 }
 #news .news-layout .articles article .article-content {
   width: 60%;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem 1rem 2rem;
   transition: all 500ms ease-in-out;
 }
 @media (max-width: 425px) {

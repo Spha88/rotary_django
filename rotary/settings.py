@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'causes.apps.CausesConfig',
+    'news.apps.NewsConfig',
 
     'tinymce',
     

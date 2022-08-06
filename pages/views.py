@@ -1,5 +1,7 @@
 from django.shortcuts import render
+
 from causes.models import Cause
+from news.models import Story
 from excerpt_html import excerpt_html
 
 def home(request):
@@ -26,7 +28,11 @@ def events(request):
 
 
 def news(request):
-    return render(request, 'pages/news.html')
+    stories = Story.objects.all()
+    return render(request, 'pages/news.html', {'stories': stories})
+
+def story_detail(request):
+    pass
 
 
 def members(request):
