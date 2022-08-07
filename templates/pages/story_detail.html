@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ story.title }}
+{% endblock title %}
+{% block content %}
+    {% include "partials/_page_header.html" with heading="news" background_image="images/pg_header_bg.jpg" %}
+    <div id="news-story" class="container">
+        <div class="layout">
+            <div class="main">
+                <article>
+                    <h2>{{ story.title }}</h2>
+                    <p class="date">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             className="h-6 w-6"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        {{ story.published_date | date:"d M Y" }}
+                    </p>
+                    <p class="author">By {{ story.author }}</p>
+                    <a href="{{ story.thumbnail.url }}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="{{ story.thumbnail.url }}" alt="{{ story.title }}" />
+                    </a>
+                    <section class="content">
+                        {{ story.body | safe }}
+                    </section>
+                </article>
+            </div>
+            <aside>
+                {% include "partials/_causes_links.html" %}
+                {% include "partials/_important_links.html" %}
+            </aside>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from excerpt_html import excerpt_html
 
 from causes.models import Cause
@@ -48,7 +48,9 @@ def news(request):
     return render(request, 'pages/news.html', {'stories': stories})
 
 def story_detail(request, slug):
-    pass
+    story = get_object_or_404(Story, slug=slug)
+    causes = Cause.objects.all()[:4]
+    return render(request, 'pages/story_detail.html', {'story': story, 'causes': causes})
 
 
 def members(request):
