@@ -23,7 +23,7 @@
                         <div>
                             {{ cause.excerpt | safe }}
                         </div>
-                        <a href="{% url 'causes' %}">Link to the cause</a>
+                        <a href="{{ cause.get_absolute_url }}">Link to the cause</a>
                     </div>
                 </div>
                 {% endfor %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} | {{ cause.title }} {% endblock title %}
+
+{% block content %}
+
+<div id="causes" class="bg-texture"> 
+    {% include 'partials/_page_header.html' with heading=cause.title background_image="images/pg_header_bg.jpg" %}
+
+    <div class="container">
+        <div id="cause-page-layout">
+            <div class="cause-container">
+                <article>
+                    <img class="featured-image" src="{{ cause.thumb_nail.url }}" alt="{{ cause.title }}" />
+                    <div class="cause-content">
+                        {{ cause.content | safe }}
+                    </div>
+                </article>
+            </div>
+            <aside>
+                {% include "partials/_causes_links.html" %}
+                {% include "partials/_important_links.html" %}
+            </aside>
+        </div>
+    </div>
+        
+</div>
+
+{% endblock content %}

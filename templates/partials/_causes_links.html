@@ -1,0 +1,16 @@
+<div id="causes-links">
+    <h2>Causes</h2>
+    <ul>
+        {% if causes %}
+            {% for cause in causes %}
+                <li>
+                    <a href="{{ cause.get_absolute_url }}" class="{% if cause.slug in request.path %}active{% endif %}">
+                        <img src="{{ cause.thumb_nail.url }}" alt="{{ cause.title }}" />
+                        <h4>{{ cause.title }}</h4>
+                    </a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+    <a href="{% url 'causes' %}" class="my-btn">View All</a>
+</div>

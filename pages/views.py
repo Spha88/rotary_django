@@ -29,6 +29,11 @@ def causes(request):
 
     return render(request, 'pages/causes.html', {'causes': causes})
 
+def cause_detail(request, slug):
+    cause = Cause.objects.get(slug=slug)
+    causes = Cause.objects.all()[:4]
+    return render(request, 'pages/cause_detail.html', {'cause': cause, 'causes': causes })
+
 
 def events(request):
     events = Event.objects.all()
