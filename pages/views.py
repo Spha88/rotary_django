@@ -15,7 +15,6 @@ def home(request):
         'causes': causes,
         'latest_story': stories[0],
         'stories': stories[1:] # last two stories of the three
-
     }
     return render(request, 'pages/index.html', content)
 
@@ -39,8 +38,9 @@ def events(request):
     events = Event.objects.all()
     return render(request, 'pages/events.html', {'events': events})
 
-def event_detail(request):
-    pass
+def event_detail(request, slug):
+    event = Event.objects.get(slug=slug)
+    return render(request, 'pages/event_detail.html', {'event': event })
 
 
 def news(request):
@@ -56,4 +56,5 @@ def members(request):
     return render(request, 'pages/members.html', {'members': members})
 
 def member_detail(request, slug):
-    pass
+    member = Member.objects.get(slug=slug)
+    return render(request, 'pages/member_detail.html', {'member': member})

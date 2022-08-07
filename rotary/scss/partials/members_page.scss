@@ -1,5 +1,6 @@
 @import './mixin.scss';
 
+/* Members page */
 .members {
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +39,73 @@
             margin: 0;
             font-weight: normal;
             font-size: .9rem;
+        }
+    }
+}
+
+/* Members_detail page*/
+.member-page {
+    padding: 3rem 0;
+    display: flex;
+    .content {
+        width: 100%;
+        .member-container {
+            header {
+                text-align: center;
+                padding-bottom: 3rem;
+                h2 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                }
+                h5 {
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    font-weight: bold;
+                }
+                @include media($mobile) {
+                    padding-bottom: 1rem;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .member-details {
+                display: flex;
+                @include media($mobile) {
+                    flex-direction: column;
+                }
+                .member-image {
+                    width: 40%;
+                    margin-right: 2rem;
+                    padding-top: 10px; //align the top of the pic with the font on desktop
+                    img {
+                        width: 100%;
+                    }
+                    @include media($laptop) {
+                        margin-right: 0;
+                    }
+                    @include media($mobile) {
+                        width: 100%;
+                    }
+                }
+                .bio {
+                    width: 60%;
+                    padding: 0 2rem;
+                    p {
+                        font-size: 1.1em;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                    @include media($mobile) {
+                        width: 100%;
+                        padding: 1rem 0;
+                    }
+                }
+                
+            }
         }
     }
 }

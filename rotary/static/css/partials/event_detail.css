@@ -1,0 +1,281 @@
+/* VARIABLES */
+/* Colors */
+/*Fonts*/
+/*Mixin */
+/* @import '../../../assets/styles/variables.scss'; */
+/* Media Query */
+/* Display element flex and center horizontal and vertical */
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #013983;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bg-texture {
+  background-image: url("../images/textured_bg.jpg");
+}
+
+.my-btn {
+  background: #013983;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 15px 60px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 400ms linear;
+}
+.my-btn:hover {
+  background-color: #019fcb;
+  color: white;
+}
+
+#navbarsExample08 a {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  color: #013983;
+}
+#navbarsExample08 a.active, #navbarsExample08 a:hover {
+  font-weight: bold;
+  color: #651d61;
+}
+
+#event-detail-page {
+  padding-bottom: 5rem;
+}
+#event-detail-page .page-nav {
+  padding: 2rem 1rem 0 1rem;
+  width: 100%;
+}
+#event-detail-page .page-nav span {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #013983;
+  cursor: pointer;
+}
+#event-detail-page .page-nav span svg {
+  width: 30px;
+  margin-right: 10px;
+}
+#event-detail-page .event-container {
+  display: flex;
+}
+#event-detail-page .event-container .event {
+  width: 65%;
+  padding-left: 5rem;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+#event-detail-page .event-container .event .event-detail h2 {
+  font-family: "Work Sans", sans-serif;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  #event-detail-page .event-container .event {
+    width: 100%;
+    padding-left: 0;
+  }
+  #event-detail-page .event-container .event .event-details {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 425px) {
+  #event-detail-page .event-container .event .event-details {
+    padding: 0;
+  }
+}
+
+#event-banner {
+  padding: 2rem 0;
+  width: 100%;
+}
+#event-banner .content-container {
+  background-position: center center;
+  background-size: 100% auto;
+  padding: 3rem 3rem;
+  width: 100% !important;
+  max-width: 1400px;
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #event-banner .content-container {
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 425px) {
+  #event-banner .content-container {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100vw;
+  }
+}
+#event-banner .content-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #020024;
+  background: linear-gradient(45deg, rgba(5, 1, 90, 0.844) 0%, rgba(9, 9, 121, 0.2077205882) 45%, rgba(2, 0, 36, 0) 100%);
+  z-index: 0;
+}
+#event-banner .content-container .event-detail {
+  width: 70%;
+  padding: 2rem 5rem 0 4rem;
+  color: white;
+  z-index: 1;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  text-shadow: 3px 3px 5px #000;
+}
+@media (max-width: 1024px) {
+  #event-banner .content-container .event-detail {
+    width: 60%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  #event-banner .content-container .event-detail {
+    width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  #event-banner .content-container .event-detail {
+    width: 100% !important;
+  }
+}
+#event-banner .content-container .event-detail h5 {
+  font-family: "Work Sans", sans-serif !important;
+  font-weight: normal;
+  font-size: 1rem;
+}
+#event-banner .content-container .event-detail h1 {
+  color: #ffc000;
+  font-size: 3rem;
+  margin: 0;
+}
+#event-banner .content-container .event-detail p {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+#event-banner .content-container .event-cta {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 3rem 2rem;
+  width: 30%;
+  height: 100%;
+  z-index: 2;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #event-banner .content-container .event-cta {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  #event-banner .content-container .event-cta {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  #event-banner .content-container .event-cta {
+    width: 100%;
+  }
+}
+#event-banner .content-container .event-cta h3 {
+  color: #013983;
+  font-size: 1.6rem;
+}
+#event-banner .content-container .event-cta .time {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #013983;
+}
+#event-banner .content-container .event-cta .time span {
+  margin-right: 10px;
+}
+#event-banner .content-container .event-cta .time svg {
+  width: 18px;
+  margin-right: 5px;
+}
+#event-banner .content-container .event-cta .add-to-calender {
+  color: #013983;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#event-banner .content-container .event-cta .add-to-calender span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding-right: 5px;
+}
+#event-banner .content-container .event-cta button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: white;
+}
+#event-banner .content-container .event-cta button:first-of-type {
+  margin-bottom: 20px;
+}
+#event-banner .content-container .event-cta .book-btn {
+  background-color: #013983;
+}
+#event-banner .content-container .event-cta .promo-btn {
+  background-color: #019fcb;
+}
+
+/*# sourceMappingURL=event_detail.css.map */

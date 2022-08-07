@@ -69,6 +69,7 @@ button {
   color: #651d61;
 }
 
+/* Members page */
 .members {
   display: flex;
   flex-wrap: wrap;
@@ -118,6 +119,85 @@ button {
   margin: 0;
   font-weight: normal;
   font-size: 0.9rem;
+}
+
+/* Members_detail page*/
+.member-page {
+  padding: 3rem 0;
+  display: flex;
+}
+.member-page .content {
+  width: 100%;
+}
+.member-page .content .member-container header {
+  text-align: center;
+  padding-bottom: 3rem;
+  transition: all 500ms ease-in-out;
+}
+.member-page .content .member-container header h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.member-page .content .member-container header h5 {
+  margin: 0;
+}
+.member-page .content .member-container header p {
+  margin: 0;
+  font-weight: bold;
+}
+@media (max-width: 425px) {
+  .member-page .content .member-container header {
+    padding-bottom: 1rem;
+  }
+  .member-page .content .member-container header h2 {
+    font-size: 2rem;
+  }
+}
+.member-page .content .member-container .member-details {
+  display: flex;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  .member-page .content .member-container .member-details {
+    flex-direction: column;
+  }
+}
+.member-page .content .member-container .member-details .member-image {
+  width: 40%;
+  margin-right: 2rem;
+  padding-top: 10px;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.member-page .content .member-container .member-details .member-image img {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .member-page .content .member-container .member-details .member-image {
+    margin-right: 0;
+  }
+}
+@media (max-width: 425px) {
+  .member-page .content .member-container .member-details .member-image {
+    width: 100%;
+  }
+}
+.member-page .content .member-container .member-details .bio {
+  width: 60%;
+  padding: 0 2rem;
+  transition: all 500ms ease-in-out;
+}
+.member-page .content .member-container .member-details .bio p {
+  font-size: 1.1em;
+}
+.member-page .content .member-container .member-details .bio p:first-child {
+  margin-top: 0;
+}
+@media (max-width: 425px) {
+  .member-page .content .member-container .member-details .bio {
+    width: 100%;
+    padding: 1rem 0;
+  }
 }
 
 /*# sourceMappingURL=members_page.css.map */

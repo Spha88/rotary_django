@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ member.get_full_name }} {% endblock title %}
+
+{% block content %}
+    {% include "partials/_page_header.html" with heading=member.get_full_name background_image="images/pg_header_bg.jpg" %}
+    <div class="container">
+        <div class="member-page">
+            <div class="content">
+                <div class="member-container">
+                    <header>
+                        <h2>{{ member.get_full_name }}</h2>
+                        {% if member.rotary_position %}<h5>{{ member.rotary_position }}</h5>{% endif %}
+                        <p>Active since {{ member.registration_date | date:"M Y" }}</p>
+                    </header>
+
+                    <div class="member-details">
+                        <div class="member-image">
+                            <img src="{{ member.profile_picture.url }}" alt="{{ member.get_full_name }}" />
+                        </div>
+                        <div class="bio">
+                            {{ member.bio | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
