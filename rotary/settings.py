@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'causes.apps.CausesConfig',
     'news.apps.NewsConfig',
+    'events.apps.EventsConfig',
+    'members.apps.MembersConfig',
 
     'tinymce',
     

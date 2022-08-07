@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from excerpt_html import excerpt_html
 
 from causes.models import Cause
 from news.models import Story
-from excerpt_html import excerpt_html
+from events.models import Event
+from members.models import Member
+
 
 def home(request):
     causes = Cause.objects.all()[:3]
@@ -28,16 +31,24 @@ def causes(request):
 
 
 def events(request):
-    return render(request, 'pages/events.html')
+    events = Event.objects.all()
+    return render(request, 'pages/events.html', {'events': events})
+
+def event_detail(request):
+    pass
 
 
 def news(request):
     stories = Story.objects.all()
     return render(request, 'pages/news.html', {'stories': stories})
 
-def story_detail(request):
+def story_detail(request, slug):
     pass
 
 
 def members(request):
-    return render(request, 'pages/members.html')
+    members = Member.objects.all()
+    return render(request, 'pages/members.html', {'members': members})
+
+def member_detail(request, slug):
+    pass

@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from tinymce import models as tinymce_models
 
 class Story(models.Model):
-    slug = models.SlugField(blank=True, null=True)
+    slug = models.SlugField(blank=True, null=True, help_text="This field will be auto populated on save")
     title = models.CharField(max_length=200)
     thumbnail = models.ImageField(upload_to='news/%Y/%m/%d/')
     excerpt = tinymce_models.HTMLField(blank=True, null=True)
