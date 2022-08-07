@@ -13,8 +13,8 @@ def home(request):
 
     content = {
         'causes': causes,
-        'latest_story': stories[0],
-        'stories': stories[1:] # last two stories of the three
+        'latest_story': stories[0] if stories else None,
+        'stories': stories[1:] if stories else None # last two stories of the three
     }
     return render(request, 'pages/index.html', content)
 
