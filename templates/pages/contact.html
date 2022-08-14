@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}News{% endblock title %}
+
+{% block content %}
+<div id="news" class="bg-texture">
+    {% include 'partials/_page_header.html' with heading="Get in touch" background_image="images/pg_header_bg.jpg" %}
+    {% include 'partials/_lead_paragraph.html' with lead_paragraph="Please fill in the form below to send a message to the Rotary Club of Port Alfred" %}
+	
+    <!-- News-->
+    <div class="container">	
+		<div class="row">
+			<div class="col-md-7">
+				{% if messages %}
+				{% for message in messages %}
+				<div {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+				{% endfor %}
+			{% endif %}
+			</div>
+		</div>			
+		<div class="row">
+			<div class="col-lg-7">	
+				<div class="contact">
+					<form class="form" method="post">
+                        {% csrf_token %}
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								{{ form.name }}
+							</div>
+							<div class="col-md-6 mb-3">
+								{{ form.email }}
+							</div>
+							<div class="col-md-12 mb-3">
+								{{ form.subject }}
+							</div>
+							<div class="col-md-12 mb-3">
+								{{ form.message }}
+							</div>
+							<div class="col-md-12 text-center">
+								<button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-primary" title="Submit Your Message!">Send Message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				
+			</div><!--- END COL --> 
+
+			
+
+			<div class="col-lg-5">
+				<div>
+					<h4>Our Address</h4>
+					<p>3481 Melrose Place, Beverly Hills</p>
+				</div>
+				<div>
+					<i class="bi bi-envelope"></i>
+					<h4>Send your message</h4>
+					<p>Info@example.com</p>
+				</div>
+				<div>
+					<i class="bi bi-envelope"></i>
+					<h4>Call us on</h4>
+					<p>(+1) 517 397 7100</p>
+				</div>
+				<div>
+					<i class="bi bi-envelope"></i>
+					<h4>Work Time</h4>
+					<p>Mon - Fri: 08.00 - 16.00. <br>Sat: 10.00 - 14.00</p>
+				</div>					
+			</div><!--- END COL --> 
+		</div><!--- END ROW -->
+    </div>
+</div>
+{% endblock content %}

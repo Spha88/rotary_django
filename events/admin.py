@@ -9,6 +9,9 @@ class EventAdmin(admin.ModelAdmin):
         }),
         ('Address', {
             'fields': ('venue', 'street', 'suburb', 'town', 'postal_code')
+        }),
+        (None, {
+            'fields': ('published', )
         })
     )
 

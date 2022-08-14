@@ -1,15 +1,18 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from excerpt_html import excerpt_html
+from django.contrib import messages
 
 from causes.models import Cause
 from news.models import Story
 from events.models import Event
 from members.models import Member
+from contact.forms import ContactMessageForm
+from contact.models import ContactMessage
 
 
 def home(request):
-    causes = Cause.objects.all()[:3]
-    stories = Story.objects.all()[:3]
+    causes = Cause.objects.all().filter(published=True)[:3]
+    stories = Story.objects.all().filter(published=True)[:3]
 
     content = {
         'causes': causes,
@@ -20,11 +23,10 @@ def home(request):
 
 
 def causes(request):
-    causes = Cause.objects.all()
+    causes = Cause.objects.all().filter(published=True)
 
     for cause in causes:
         cause.excerpt = excerpt_html(cause.content, 20)
-        print(cause.excerpt)
 
     return render(request, 'pages/causes.html', {'causes': causes})
 
@@ -35,7 +37,7 @@ def cause_detail(request, slug):
 
 
 def events(request):
-    events = Event.objects.all()
+    events = Event.objects.all().filter(published=True)
     return render(request, 'pages/events.html', {'events': events})
 
 def event_detail(request, slug):
@@ -44,7 +46,7 @@ def event_detail(request, slug):
 
 
 def news(request):
-    stories = Story.objects.all()
+    stories = Story.objects.all().filter(published=True)
     return render(request, 'pages/news.html', {'stories': stories})
 
 def story_detail(request, slug):
@@ -60,3 +62,22 @@ def members(request):
 def member_detail(request, slug):
     member = Member.objects.get(slug=slug)
     return render(request, 'pages/member_detail.html', {'member': member})
+
+
+def contact(request):
+    if request.method == "POST":
+        form = ContactMessageForm(request.POST)
+        if form.is_valid():
+            message = ContactMessage(name=form.cleaned_data['name'], 
+                                    email=form.cleaned_data['email'], 
+                                    subject=form.cleaned_data['subject'], 
+                                    message=form.cleaned_data['message']
+                                    )
+            message.save()
+
+            messages.success(request, "Message has been sent thank you")
+
+            return redirect('contact')
+
+    form = ContactMessageForm()
+    return render(request, 'pages/contact.html', {'form': form})

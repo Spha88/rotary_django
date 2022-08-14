@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'events.apps.EventsConfig',
     'members.apps.MembersConfig',
+    'contact.apps.ContactConfig',
 
     'tinymce',
     
