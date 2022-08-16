@@ -25,7 +25,7 @@
                     This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this: As a new WordPress user, you should go to your dashboard to delete this page and create new pages for your content. Have fun! Vivamus enim nibh, maximus mollis hendrerit eu, dictum id quam. Ut sit amet justo dolor. Nam ullamcorper eleifend tortor eget dapibus. Nam interdum suscipit eleifend. Vestibulum iaculis dolor sit...
                 </p>
             </div>
-            <a href="#" class="my-btn mt-2">Read more</a>
+            {% comment %} <a href="#" class="my-btn mt-2">Read more</a> {% endcomment %}
         </div>
     </section>
     <!-- Causes Section-->
@@ -51,7 +51,7 @@
                         {% endfor %}
                     </div>
                     <div class="btn-container">
-                        <a class="view-all-btn" href="{% url 'causes' %}">View All Btn</a>
+                        <a class="view-all-btn" href="{% url 'causes' %}">View All</a>
                     </div>
                 {% else %}
                     <p class="lead text-danger">No causes added yet</p>
@@ -127,7 +127,7 @@
                     <div class="message">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit aliquid aperiam? Deserunt quo dolores dolorem aspernatur tenetur laboriosam corrupti voluptatem cum reprehenderit culpa doloremque at blanditiis iste optio inventore sit quis, esse, qui, pariatur porro? Alias iste praesentium pariatur quasi velit dolores quisquam, nam doloribus, quia animi rerum omnis.
                     </div>
-                    <a class="my-btn" href="#">Read More</a>
+                    {% comment %} <a class="my-btn" href="#">Read More</a> {% endcomment %}
                 </div>
             </div>
         </div>
@@ -141,7 +141,7 @@
                     Club activities, social events, and volunteer projects offer networking opportunities that build personal and professional connections. And Rotarians can extend those networks by visiting other clubs around the globe.
                 </p>
                 <button>
-                    Learn More
+                    <a href="{% url 'contact' %}">Lean more</a>
                 </button>
             </div>
         </div>
