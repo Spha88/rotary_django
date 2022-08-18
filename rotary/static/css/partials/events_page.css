@@ -59,14 +59,47 @@ button {
   color: white;
 }
 
-#navbarsExample08 a {
-  font-size: 1.1rem;
+#navbar-container {
+  border-top: 1px solid rgba(187, 195, 209, 0.719);
+  padding: 0;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #navbar-container {
+    padding: 1rem;
+  }
+}
+#navbar-container #navbarsExample08 a {
+  font-family: "Montserrat", sans-serif;
   margin-right: 2rem;
   color: #013983;
-}
-#navbarsExample08 a.active, #navbarsExample08 a:hover {
   font-weight: bold;
+  display: block;
+  position: relative;
+}
+#navbar-container #navbarsExample08 a:after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 500ms linear;
+}
+#navbar-container #navbarsExample08 a.active, #navbar-container #navbarsExample08 a:hover {
   color: #651d61;
+  transition: all 500ms ease-in-out;
+}
+#navbar-container #navbarsExample08 a.active:after, #navbar-container #navbarsExample08 a:hover:after {
+  width: 100%;
+  left: 0;
+  border-bottom: 5px solid #651d61;
+}
+@media (max-width: 768px) {
+  #navbar-container #navbarsExample08 a.active:after, #navbar-container #navbarsExample08 a:hover:after {
+    border-bottom: none;
+  }
 }
 
 #events .events-container {

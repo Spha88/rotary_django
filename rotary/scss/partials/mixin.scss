@@ -119,14 +119,43 @@ $mobile: 425px;
     }
 }
 
-#navbarsExample08 {
-    a {
-        font-size: 1.1rem;
-        margin-right: 2rem;
-        color: $rotary-dark-blue;
-        &.active, &:hover {
+#navbar-container {
+    border-top: 1px solid $border-grey;
+    padding: 0;
+    @include media($tablet) {
+        padding: 1rem;
+    }
+    #navbarsExample08 {
+        a {
+            font-family: $heading-font;
+            margin-right: 2rem;
+            color: $rotary-dark-blue;
             font-weight: bold;
-            color: $purple;
+            display: block;
+            position: relative;
+            &:after {
+                display: block;
+                content: '';
+                width: 0;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transition: all 500ms linear;
+            }
+            &.active, &:hover {
+                color: $purple;
+                &:after {
+                    width: 100%;
+                    left: 0;
+                    border-bottom: 5px solid $purple;
+                }
+                @include media($tablet) {
+                    &:after {
+                        border-bottom: none;
+                    }
+                }
+            }
         }
     }
 }
