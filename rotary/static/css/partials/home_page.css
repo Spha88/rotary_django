@@ -226,7 +226,7 @@ button {
 #stories-section h1 {
   color: #013983;
   font-size: 3rem;
-  margin-top: 0;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 #stories-section .content {
@@ -309,7 +309,7 @@ button {
 }
 #stories-section .content .last-two-stories .story img {
   width: 50%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
 }
 #stories-section .content .last-two-stories .story .details {
@@ -336,7 +336,6 @@ button {
 }
 #stories-section .content .last-two-stories .story .details a {
   display: inline-block;
-  margin-top: 1rem;
   font-size: 0.9em;
   font-weight: bold;
   color: #019fcb;
