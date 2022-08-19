@@ -307,7 +307,7 @@ button {
   height: 90%;
 }
 .my-cards .my-card .card-body {
-  padding: 1rem 1.5rem 2rem;
+  padding: 1rem 2rem 2rem;
   text-align: center;
 }
 .my-cards .my-card .card-body h1 {
@@ -315,19 +315,19 @@ button {
   line-height: normal;
 }
 .my-cards .my-card .card-body div {
-  font-size: 1.1em;
+  font-size: 1em;
   font-family: "Work Sans", sans-serif !important;
   color: inherit !important;
 }
 .my-cards .my-card .card-body div p {
-  font-size: 1.1em;
+  font-size: 1em;
   font-family: "Work Sans", sans-serif !important;
   color: inherit !important;
 }
 .my-cards .my-card .card-body a {
   display: inline-block;
   color: #019fcb;
-  font-weight: 500;
+  font-weight: bold;
   transition: color 200ms linear;
 }
 .my-cards .my-card .card-body a:hover {
