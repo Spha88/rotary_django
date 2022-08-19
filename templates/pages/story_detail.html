@@ -4,6 +4,17 @@
 {% endblock title %}
 {% block content %}
     {% include "partials/_page_header.html" with heading="news" background_image="images/pg_header_bg.jpg" %}
+    
+    {% comment %} Breadcrum {% endcomment %}
+    <nav class="container pt-3 d-none d-md-block" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'news' %}">News</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ story.title }}</li>
+        </ol>
+    </nav>
+
+    {% comment %} Article content {% endcomment %}
     <div id="news-story" class="container">
         <div class="layout">
             <div class="main">

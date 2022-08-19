@@ -119,7 +119,7 @@ button {
 }
 #news-story .layout .main article {
   width: 100%;
-  padding: 3rem 0;
+  padding: 1rem 0 3rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid rgba(187, 195, 209, 0.719);
 }
