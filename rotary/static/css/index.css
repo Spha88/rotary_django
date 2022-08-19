@@ -2350,6 +2350,9 @@ button {
   height: 400px;
   object-fit: cover;
 }
+#news-story .layout .main article .content {
+  padding-top: 2rem;
+}
 @media (max-width: 425px) {
   #news-story .layout .main {
     width: 100%;

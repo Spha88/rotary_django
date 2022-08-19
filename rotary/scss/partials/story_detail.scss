@@ -42,6 +42,9 @@
                     height: 400px;
                     object-fit: cover;
                 }
+                .content {
+                    padding-top: 2rem;
+                }
             }
             @include media($mobile) {
                 width: 100%;
